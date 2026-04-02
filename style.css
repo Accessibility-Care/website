@@ -24,7 +24,7 @@
 
     /* WCAG 2.2 compliant colors for text on background */
     --text-color-primary: var(--mdc-theme-on-surface);
-    --text-color-secondary: #5f6368; /* Medium grey for secondary text */
+    --text-color-secondary: #3c4043; /* Medium grey for secondary text - improved contrast */
     --text-color-on-hero: #ffffff; /* White for good contrast on dark hero */
 
     /* Spacing variables */
@@ -299,10 +299,7 @@ img {
     height: auto;
     display: block;
 }
-.mdc-card__media {
-    background-size: cover !important;
-    background-position: center center !important;
-}
+
 
 /* Adjust card layout for smaller screens */
 @media (max-width: 600px) {

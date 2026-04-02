@@ -48,13 +48,13 @@
             </div>
         </section>
 
-        <section id="services" class="mdc-layout-grid">
+        <section id="services" class="mdc-layout-grid" tabindex="-1">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <h2 class="mdc-typography--headline4">Our Services</h2>
                     <div class="mdc-card">
                         <div class="mdc-card__primary-action" tabindex="0">
-                            <div class="mdc-card__media mdc-card__media--16-9" style="background-image: url('https://via.placeholder.com/300x200.png?text=AI+Audit');"></div>
+                            <img class="mdc-card__media mdc-card__media--16-9" src="https://via.placeholder.com/300x200.png?text=AI+Audit" alt="Illustration of AI performing an audit, with circuitry and data points.">
                             <div class="mdc-card__content">
                                 <h3 class="mdc-typography--headline6">AI-Enhanced Audits</h3>
                                 <p class="mdc-typography--body2">Utilizing cutting-edge AI, we quickly identify common accessibility issues, providing a comprehensive initial scan.</p>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="mdc-card">
                         <div class="mdc-card__primary-action" tabindex="0">
-                            <div class="mdc-card__media mdc-card__media--16-9" style="background-image: url('https://via.placeholder.com/300x200.png?text=Expert+Review');"></div>
+                            <img class="mdc-card__media mdc-card__media--16-9" src="https://via.placeholder.com/300x200.png?text=Expert+Review" alt="Illustration of human eyes carefully reviewing a document, signifying expert analysis.">
                             <div class="mdc-card__content">
                                 <h3 class="mdc-typography--headline6">Expert Human Review</h3>
                                 <p class="mdc-typography--body2">Beyond AI, our certified accessibility experts conduct in-depth manual reviews to catch nuanced issues and provide actionable recommendations.</p>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="mdc-card">
                         <div class="mdc-card__primary-action" tabindex="0">
-                            <div class="mdc-card__media mdc-card__media--16-9" style="background-image: url('https://via.placeholder.com/300x200.png?text=Detailed+Reports');"></div>
+                            <img class="mdc-card__media mdc-card__media--16-9" src="https://via.placeholder.com/300x200.png?text=Detailed+Reports" alt="Illustration of a detailed report with charts and graphs, indicating thorough analysis.">
                             <div class="mdc-card__content">
                                 <h3 class="mdc-typography--headline6">Detailed & Actionable Reports</h3>
                                 <p class="mdc-typography--body2">Receive clear, prioritized reports with specific steps to remediate identified accessibility barriers.</p>
@@ -83,7 +83,7 @@
             </div>
         </section>
 
-        <section id="wcag" class="mdc-layout-grid">
+        <section id="wcag" class="mdc-layout-grid" tabindex="-1">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <h2 class="mdc-typography--headline4">WCAG 2.2 Compliance</h2>
@@ -114,24 +114,24 @@
             </div>
         </section>
 
-        <section id="contact" class="mdc-layout-grid">
+        <section id="contact" class="mdc-layout-grid" tabindex="-1">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                     <h2 class="mdc-typography--headline4">Get in Touch</h2>
                     <p class="mdc-typography--body1">Ready to make your website accessible to everyone? Contact us today for a personalized quote.</p>
                     <div class="mdc-text-field mdc-text-field--filled">
-                        <input type="text" id="name-input" class="mdc-text-field__input" aria-label="Name">
-                        <label for="name-input" class="mdc-floating-label">Name</label>
+                        <input type="text" id="name-input" class="mdc-text-field__input" aria-labelledby="name-label">
+                        <label id="name-label" for="name-input" class="mdc-floating-label">Name</label>
                         <div class="mdc-line-ripple"></div>
                     </div>
                     <div class="mdc-text-field mdc-text-field--filled">
-                        <input type="email" id="email-input" class="mdc-text-field__input" aria-label="Email">
-                        <label for="email-input" class="mdc-floating-label">Email</label>
+                        <input type="email" id="email-input" class="mdc-text-field__input" aria-labelledby="email-label">
+                        <label id="email-label" for="email-input" class="mdc-floating-label">Email</label>
                         <div class="mdc-line-ripple"></div>
                     </div>
                     <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--filled">
-                        <textarea id="message-input" class="mdc-text-field__input" aria-label="Message" rows="5"></textarea>
-                        <label for="message-input" class="mdc-floating-label">Message</label>
+                        <textarea id="message-input" class="mdc-text-field__input" aria-labelledby="message-label" rows="5"></textarea>
+                        <label id="message-label" for="message-input" class="mdc-floating-label">Message</label>
                         <div class="mdc-line-ripple"></div>
                     </div>
                     <button class="mdc-button mdc-button--raised">
