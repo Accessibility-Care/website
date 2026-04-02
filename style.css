@@ -1,0 +1,198 @@
+/* Custom styles go here */
+:root {
+    --mdc-theme-primary: #1976d2; /* Material Blue 700 */
+    --mdc-theme-secondary: #d32f2f; /* Material Red 700 */
+    --mdc-theme-on-primary: #ffffff;
+    --mdc-theme-on-secondary: #ffffff;
+    --mdc-theme-surface: #ffffff;
+    --mdc-theme-on-surface: #333333;
+    --mdc-theme-background: #f5f5f5;
+
+    /* WCAG 2.2 compliant colors for text on background */
+    --text-color-on-light: #212121; /* Dark grey for good contrast on light backgrounds */
+    --text-color-on-dark: #ffffff; /* White for good contrast on dark backgrounds */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--mdc-theme-background);
+    color: var(--text-color-on-light);
+    line-height: 1.6;
+}
+
+/* Ensure accessible focus states */
+*:focus {
+    outline: 0.2rem solid var(--mdc-theme-primary);
+    outline-offset: 0.2rem;
+}
+
+/* Header/Top App Bar */
+.mdc-top-app-bar {
+    background-color: var(--mdc-theme-primary);
+    color: var(--mdc-theme-on-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.mdc-top-app-bar__title {
+    color: var(--mdc-theme-on-primary);
+    font-weight: 500;
+}
+
+.mdc-top-app-bar__action-item {
+    color: var(--mdc-theme-on-primary);
+}
+
+/* Main content adjustment for fixed header */
+.mdc-top-app-bar--fixed-adjust {
+    padding-top: 64px; /* Default height of top app bar */
+}
+@media (max-width: 599px) {
+    .mdc-top-app-bar--fixed-adjust {
+        padding-top: 56px; /* Height for mobile */
+    }
+}
+
+
+/* Layout grid for sections */
+.mdc-layout-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.mdc-layout-grid__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px; /* Compensate for cell padding */
+}
+
+.mdc-layout-grid__cell {
+    padding: 12px;
+}
+
+/* Section styling */
+section {
+    padding: 48px 0;
+    margin-bottom: 24px;
+}
+
+section#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500.png?text=Accessibility+Banner') no-repeat center center/cover;
+    color: var(--text-color-on-dark);
+    text-align: center;
+    padding: 96px 24px;
+}
+
+section#hero h1 {
+    color: var(--text-color-on-dark);
+    margin-bottom: 16px;
+}
+
+section#hero p {
+    max-width: 800px;
+    margin: 0 auto 32px;
+}
+
+section#services .mdc-card {
+    margin-bottom: 24px;
+    background-color: var(--mdc-theme-surface);
+    color: var(--mdc-theme-on-surface);
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),
+                0px 1px 1px 0px rgba(0,0,0,0.14),
+                0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+section#services .mdc-card__media {
+    background-color: #eee; /* Placeholder background */
+}
+
+section#wcag ul.mdc-list {
+    background-color: var(--mdc-theme-surface);
+    color: var(--mdc-theme-on-surface);
+    border-radius: 4px;
+    padding: 0;
+}
+
+section#wcag .mdc-list-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+section#wcag .mdc-list-item:last-child {
+    border-bottom: none;
+}
+
+section#contact .mdc-text-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+section#contact .mdc-text-field--textarea {
+    height: auto; /* Allow textarea to size naturally */
+}
+
+/* Buttons */
+.mdc-button--raised {
+    background-color: var(--mdc-theme-secondary);
+    color: var(--mdc-theme-on-secondary);
+}
+
+.mdc-button--raised:hover {
+    background-color: #b71c1c; /* Slightly darker red */
+}
+
+/* Footer */
+footer {
+    background-color: var(--mdc-theme-primary);
+    color: var(--mdc-theme-on-primary);
+    text-align: center;
+    padding: 24px;
+    margin-top: 48px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Typography adjustments for better readability and Material Design consistency */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400; /* Material Design often uses lighter weights for headlines */
+    color: var(--text-color-on-light);
+}
+.mdc-typography--headline3 { font-size: 3rem; line-height: 3.5rem; letter-spacing: 0; }
+.mdc-typography--headline4 { font-size: 2.125rem; line-height: 2.5rem; letter-spacing: 0.00735em; }
+.mdc-typography--headline6 { font-size: 1.25rem; line-height: 2rem; letter-spacing: 0.0125em; }
+.mdc-typography--body1 { font-size: 1rem; line-height: 1.5rem; letter-spacing: 0.03125em; }
+.mdc-typography--body2 { font-size: 0.875rem; line-height: 1.25rem; letter-spacing: 0.01786em; }
+
+@media (max-width: 768px) {
+    .mdc-typography--headline3 { font-size: 2.5rem; line-height: 3rem; }
+    .mdc-typography--headline4 { font-size: 1.75rem; line-height: 2.25rem; }
+}
+
+/* Accessibility for images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.mdc-card__media {
+    background-size: cover !important; /* Ensure placeholder images cover the area */
+    background-position: center center !important;
+}
+
+/* Adjust card layout for smaller screens */
+@media (max-width: 600px) {
+    section#services .mdc-card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
