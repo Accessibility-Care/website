@@ -3,165 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Accessibility Audits for European Websites</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Material Components for the Web CSS -->
+    <title>AI-Driven Accessibility Audits | European WCAG Compliance</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Google Fonts - Roboto (for Material Design) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            /* M3 Color Palette - High Contrast for WCAG AA/AAA */
+            --mdc-theme-primary: #0061a4;
+            --mdc-theme-on-primary: #ffffff;
+            --mdc-theme-secondary: #535f70;
+            --mdc-theme-background: #fdfcff;
+            --mdc-theme-surface: #fdfcff;
+            --mdc-theme-on-surface: #1a1c1e;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--mdc-theme-background);
+            color: var(--mdc-theme-on-surface);
+            line-height: 1.5;
+        }
+
+        /* Skip to content link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--mdc-theme-primary);
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+        .skip-link:focus { top: 0; }
+
+        .mdc-top-app-bar { background-color: var(--mdc-theme-primary); }
+        
+        .hero-section {
+            padding: 80px 24px;
+            text-align: center;
+            background: #e1e2ec; /* Soft M3 tonal surface */
+        }
+
+        .hero-title { font-weight: 700; margin-bottom: 16px; }
+
+        .mdc-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+        }
+
+        .main-content { max-width: 1200px; margin: 0 auto; padding: 40px 16px; }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #c4c6cf;
+        }
+
+        /* Visible focus indicator - WCAG 2.2 (2.4.11) */
+        :focus-visible {
+            outline: 3px solid var(--mdc-theme-primary);
+            outline-offset: 4px;
+        }
+    </style>
 </head>
 <body>
-    <header class="mdc-top-app-bar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                <span class="mdc-top-app-bar__title">AI-Powered Accessibility Audits</span>
+                <span class="mdc-top-app-bar__title">EU Accessibility AI</span>
             </section>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-                <a href="#services" class="mdc-button mdc-top-app-bar__action-item">
+            <nav class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <a href="#services" class="mdc-button mdc-button--outlined" style="--mdc-theme-outline: white; color: white; margin-right: 8px;">
                     <span class="mdc-button__label">Services</span>
                 </a>
-                <a href="#wcag" class="mdc-button mdc-top-app-bar__action-item">
-                    <span class="mdc-button__label">WCAG 2.2</span>
-                </a>
-                <a href="#contact" class="mdc-button mdc-top-app-bar__action-item">
-                    <span class="mdc-button__label">Contact</span>
-                </a>
-                <a href="not_a_checkbox.html" class="mdc-button mdc-top-app-bar__action-item">
-                    <span class="mdc-button__label">Not a Checkbox</span>
-                </a>
-            </section>
+                <button class="mdc-button mdc-button--raised">
+                    <span class="mdc-button__label">Audit Now</span>
+                </button>
+            </nav>
         </div>
     </header>
 
-    <main class="mdc-top-app-bar--fixed-adjust">
-        <section id="hero" class="mdc-layout-grid">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-typography--headline3">
-                    <h1>Fast, AI-Powered Accessibility Audits for European Websites</h1>
-                    <p class="mdc-typography--body1">Ensure your website is inclusive and compliant with WCAG 2.2 standards, leveraging the power of AI for rapid and accurate assessments.</p>
-                    <button class="mdc-button mdc-button--raised mdc-button--leading-icon">
-                        <span class="mdc-button__ripple"></span>
-                        <i class="material-icons mdc-button__icon" aria-hidden="true">check_circle</i>
-                        <span class="mdc-button__label">Get a Free Consultation</span>
-                    </button>
-                </div>
-            </div>
+    <main id="main-content" class="mdc-top-app-bar--fixed-adjust">
+        <section class="hero-section">
+            <h1 class="mdc-typography--headline3 hero-title">Fast Audits for a More Inclusive Europe</h1>
+            <p class="mdc-typography--body1">Expert analysis meets AI efficiency. We ensure your site meets WCAG 2.2 standards in record time.</p>
         </section>
 
-        <section id="services" class="mdc-layout-grid" tabindex="-1">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                    <h2 class="mdc-typography--headline4">Our Services</h2>
-                    <div class="mdc-card">
-                        <div class="mdc-card__primary-action" tabindex="0">
-                            <img class="mdc-card__media mdc-card__media--16-9" src="https://via.placeholder.com/300x200.png?text=AI+Audit" alt="Illustration of AI performing an audit, with circuitry and data points.">
-                            <div class="mdc-card__content">
-                                <h3 class="mdc-typography--headline6">AI-Enhanced Audits</h3>
-                                <p class="mdc-typography--body2">Utilizing cutting-edge AI, we quickly identify common accessibility issues, providing a comprehensive initial scan.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdc-card">
-                        <div class="mdc-card__primary-action" tabindex="0">
-                            <img class="mdc-card__media mdc-card__media--16-9" src="https://via.placeholder.com/300x200.png?text=Expert+Review" alt="Illustration of human eyes carefully reviewing a document, signifying expert analysis.">
-                            <div class="mdc-card__content">
-                                <h3 class="mdc-typography--headline6">Expert Human Review</h3>
-                                <p class="mdc-typography--body2">Beyond AI, our certified accessibility experts conduct in-depth manual reviews to catch nuanced issues and provide actionable recommendations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mdc-card">
-                        <div class="mdc-card__primary-action" tabindex="0">
-                            <img class="mdc-card__media mdc-card__media--16-9" src="https://via.placeholder.com/300x200.png?text=Detailed+Reports" alt="Illustration of a detailed report with charts and graphs, indicating thorough analysis.">
-                            <div class="mdc-card__content">
-                                <h3 class="mdc-typography--headline6">Detailed & Actionable Reports</h3>
-                                <p class="mdc-typography--body2">Receive clear, prioritized reports with specific steps to remediate identified accessibility barriers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="main-content">
+            <h2 id="services" class="mdc-typography--headline4">Expert Services</h2>
+            <div class="grid-container">
+                <article class="mdc-card">
+                    <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 48px; color: var(--mdc-theme-primary);">Bolt</span>
+                    <h3 class="mdc-typography--headline6">AI-Rapid Scan</h3>
+                    <p class="mdc-typography--body2">Instant identification of structural accessibility issues using neural networks trained on WCAG patterns.</p>
+                </article>
 
-        <section id="wcag" class="mdc-layout-grid" tabindex="-1">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                    <h2 class="mdc-typography--headline4">WCAG 2.2 Compliance</h2>
-                    <p class="mdc-typography--body1">Our audits are meticulously aligned with the latest Web Content Accessibility Guidelines (WCAG) 2.2, ensuring your website meets international accessibility standards. We focus on:</p>
-                    <ul class="mdc-list">
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">visibility</i>
-                            <span class="mdc-list-item__text">Perceivable: Information and UI components must be presentable to users in ways they can perceive.</span>
-                        </li>
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">gamepad</i>
-                            <span class="mdc-list-item__text">Operable: UI components and navigation must be operable.</span>
-                        </li>
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">menu_book</i>
-                            <span class="mdc-list-item__text">Understandable: Information and the operation of user interface must be understandable.</span>
-                        </li>
-                        <li class="mdc-list-item">
-                            <span class="mdc-list-item__ripple"></span>
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings_applications</i>
-                            <span class="mdc-list-item__text">Robust: Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</span>
-                        </li>
-                    </ul>
-                </div>
+                <article class="mdc-card">
+                    <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 48px; color: var(--mdc-theme-primary);">Psychology</span>
+                    <h3 class="mdc-typography--headline6">Expert Review</h3>
+                    <p class="mdc-typography--body2">Certified experts manually test complex interactions, ensuring logical flow and screen-reader harmony.</p>
+                </article>
             </div>
-        </section>
-
-        <section id="contact" class="mdc-layout-grid" tabindex="-1">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                    <h2 class="mdc-typography--headline4">Get in Touch</h2>
-                    <p class="mdc-typography--body1">Ready to make your website accessible to everyone? Contact us today for a personalized quote.</p>
-                    <div class="mdc-text-field mdc-text-field--filled">
-                        <input type="text" id="name-input" class="mdc-text-field__input" aria-labelledby="name-label">
-                        <label id="name-label" for="name-input" class="mdc-floating-label">Name</label>
-                        <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div class="mdc-text-field mdc-text-field--filled">
-                        <input type="email" id="email-input" class="mdc-text-field__input" aria-labelledby="email-label">
-                        <label id="email-label" for="email-input" class="mdc-floating-label">Email</label>
-                        <div class="mdc-line-ripple"></div>
-                    </div>
-                    <div class="mdc-text-field mdc-text-field--textarea mdc-text-field--filled">
-                        <textarea id="message-input" class="mdc-text-field__input" aria-labelledby="message-label" rows="5"></textarea>
-                        <label id="message-label" for="message-input" class="mdc-floating-label">Message</label>
-                        <div class="mdc-line-ripple"></div>
-                    </div>
-                    <button class="mdc-button mdc-button--raised">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">Send Message</span>
-                    </button>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <div class="mdc-layout-grid">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                    <p class="mdc-typography--body2">&copy; 2026 AI-Powered Accessibility Audits. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
+        <p class="mdc-typography--body2">© 2026 Accessibility Expert. Compliant with European Accessibility Act (EAA).</p>
     </footer>
 
-    <!-- Material Components for the Web JavaScript -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
-        // Initialize Material Design Components
-        mdc.autoInit();
+        // Proper Initialization of M3 Components
+        window.addEventListener('load', () => {
+            mdc.autoInit();
+            
+            // Example of Ripple effect for better interaction feedback
+            const buttons = document.querySelectorAll('.mdc-button');
+            buttons.forEach(btn => mdc.ripple.MDCRipple.attachTo(btn));
+        });
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
